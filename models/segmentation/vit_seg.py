@@ -5,7 +5,7 @@ File Description: Vision Transformer for Point Cloud Segmentation
 from base64 import encode
 import torch
 import torch.nn as nn
-from .head_seg import SceneSegHeadPointNet
+from third_party.openpoints.models.head_seg import SceneSegHeadPointNet
 from ..backbone import PointViT, PointNet2Decoder, PointNetFPModule
 from ..layers import furthest_point_sample
 from ..build import MODELS

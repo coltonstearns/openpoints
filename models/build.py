@@ -1,4 +1,4 @@
-from openpoints.utils import registry
+from third_party.openpoints.utils import registry
 MODELS = registry.Registry('models')
 
 

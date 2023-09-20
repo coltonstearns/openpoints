@@ -7,7 +7,7 @@ import copy, logging
 import torch
 import torch.nn as nn
 from torch.autograd import Function
-from openpoints.cpp import pointnet2_cuda
+from third_party.openpoints.cpp import pointnet2_cuda
 
 class KNN(nn.Module):
     def __init__(self, neighbors, transpose_mode=True):
@@ -340,6 +340,8 @@ def create_grouper(group_args):
     method = group_args_copy.pop('NAME', 'ballquery')
     radius = group_args_copy.pop('radius', 0.1)
     nsample = group_args_copy.pop('nsample', 20)
+    print("[========")
+    print(group_args_copy)
 
     logging.info(group_args)
     if nsample is not None:
